@@ -1,0 +1,25 @@
+@import "./base.css";
+#app {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-weight: normal;
+}
+a,
+.green {
+  text-decoration: none;
+  color: var(--theme-color);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+a:hover {
+  color: #3cc55375;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
