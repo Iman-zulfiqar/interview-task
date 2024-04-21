@@ -1,15 +1,16 @@
 <template>
     <div class="flex flex-col px-4 pb-4 rounded-lg border border-solid border-slate-300">
-        <div class="flex gap-5  p-3 items-center mb-4 border-b-2 border-dotted justify-between w-full bg-white max-md:flex-wrap max-md:max-w-full">
+        <div
+            class="flex gap-5  p-3 items-center mb-4 border-b-2 border-dotted justify-between w-full bg-white max-md:flex-wrap max-md:max-w-full">
             <div class="flex gap-5 justify-between items-center max-md:flex-wrap">
                 <div class="flex gap-3 self-stretch">
-                    <div class="flex gap-0">
+                    <div class="flex items-center justify-center gap-0">
                         <div
-                            class="justify-center flex items-center  w-8 h-8 text-[14px] font-medium tracking-normal  text-white whitespace-nowrap bg-emerald-700 rounded-2xl border-2 border-white border-solid">
+                            class="justify-center z-[1] flex items-center  w-8 h-8 text-[14px] font-medium tracking-normal  text-white whitespace-nowrap bg-emerald-700 rounded-2xl border-2 border-white border-solid">
                             AD
                         </div>
                         <div
-                            class="flex justify-center items-center self-start px-2 rounded-2xl bg-neutral-600 h-[30px] w-[30px]">
+                            class="flex justify-center ml-[-10px] items-center self-start px-2 rounded-2xl bg-neutral-600 h-[30px] w-[30px]">
                             <img loading="lazy"
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/950a42d2e68cb3011424fe987940ab4074510d54af7c0fe8eec8d8593736d7c4?"
                                 class="w-3 aspect-[0.67]" />

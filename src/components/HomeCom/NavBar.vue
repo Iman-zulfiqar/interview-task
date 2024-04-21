@@ -4,17 +4,18 @@
 <template>
     <div
         class="flex gap-5 justify-between px-6 py-4 border-b border-solid border-slate-300 max-md:flex-wrap max-md:px-5">
-        <div class="flex gap-5 justify-between py-0.5 text-base font-medium tracking-normal leading-6 text-neutral-600">
+        <div
+            class="flex gap-5 justify-between items-center py-0.5 text-base font-medium tracking-normal text-neutral-600">
             <img loading="lazy" src="../../assets/images/Logo.png"
                 class="shrink-0 max-w-full aspect-[3.33] w-[122px]" />
-            <div class="flex gap-2.5 my-auto rounded-lg">
+            <span class="text-[#D4E1E4] text-[20px]">|</span>
+            <div class="flex gap-2 px-2 items-center my-auto rounded-lg">
                 <div class="flex gap-2">
-                    <img loading="lazy" src="../../assets/images/HomeIcon.png" class="shrink-0 w-8 aspect-square" />
-                    <div class="my-auto">PMS HUB/HOME</div>
+                    <img loading="lazy" src="../../assets/images/HomeIcon.png"
+                        class="shrink-0 w-7 self-stretch aspect-square" />
+                    <div class="my-auto text-[14px]">PMS HUB/HOME</div>
                 </div>
-                <img loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/19270272329923e39d360461652b9f7f140897c42bda313b75f5318cfd910a9b?"
-                    class="shrink-0 my-auto aspect-square w-[18px]" />
+                <div class="w-[10px] h-[10px] mt-[-6px] border-[#595e60] rotate-45 border-b-2 border-r-2 "></div>
             </div>
         </div>
         <div class="flex gap-5 justify-between items-center max-md:flex-wrap">
@@ -26,18 +27,17 @@
                 <input class="flex-1 text-ellipsis outline-none bg-slate-100" type="search"
                     placeholder='Search anything' />
             </div>
+            <span class="text-[#D4E1E4] text-[20px]">|</span>
             <div class="flex gap-3.5 self-stretch my-auto">
-                <img loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5bdceb62219cf57c9c4272a4fde29e6d11750c1ba4fb8f2c6cb2527736f8dd0?"
-                    class="shrink-0 w-7 aspect-square" /><img loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/1d509edf18935b0fee14e238d61f3f75aa3f71cecc4086d4138072f7126bb569?"
-                    class="shrink-0 w-7 aspect-square" /><img loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ebe42791350c9ef9505e0bac839112946b2939a06458e25c0be7e00616380f4?"
-                    class="shrink-0 w-7 aspect-square" />
+                <img loading="lazy" src="../../assets/images/BellIcon.png" class="shrink-0 self-stretch my-auto  " />
+                <img loading="lazy" src="../../assets/images/QuestionIcon.png"
+                    class="shrink-0 self-stretch my-auto  aspect-square" />
+                <img loading="lazy" src="../../assets/images/SettingIcon.png" class="shrink-0 self-stretch my-auto " />
             </div>
-            <div class="shrink-0 self-stretch my-auto w-4 h-4"></div>
+            <span class="text-[#D4E1E4] text-[20px]">|</span>
+            <img loading="lazy" src="../../assets/images/MenuIcon.png" class="shrink-0 self-stretch my-auto " />
             <img loading="lazy" src="../../assets/images/Avatar.png"
-                class="shrink-0 self-stretch my-auto w-8 aspect-square" />
+                class="shrink-0 self-stretch my-auto w-8  aspect-square" />
         </div>
     </div>
 </template>
@@ -53,12 +53,4 @@
 input[type='search']::placeholder {
     color: #D4E1E4;
 }
-
-.navbar div {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.navbar div img {}
 </style>

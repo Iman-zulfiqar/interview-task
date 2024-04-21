@@ -35,7 +35,7 @@ const widgetArr = ref([
     margin-top: 30px;
     margin-bottom: 10px;
     padding: 10px 20px;
-    box-sizing: border-box;
+
 }
 
 .border-div {
@@ -43,7 +43,10 @@ const widgetArr = ref([
     border-left: 2px dotted #D4E1E4;
     min-height: 122px;
     display: inline-block;
+}
 
+.widget:last-child .border-div {
+    display: none;
 }
 
 .widget {
