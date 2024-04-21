@@ -10,13 +10,11 @@ const widgetArr = ref([
     { label: 'Completed Tasks', number: 1, count: 6 },
     { label: 'Overdue Tasks', number: 2, count: 3 },
 ])
-
 </script>
-
 <template>
     <NavBar></NavBar>
     <!-- list rendering  -->
-    <div class="counter-container">
+    <div class="counter-container max-sm:flex-wrap">
         <div class="widget" v-for="item in widgetArr">
             <CountWidget :label=item.label :number=item.number :count=item.count> </CountWidget>
             <span class="border-div"></span>
@@ -29,13 +27,12 @@ const widgetArr = ref([
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     border: 1px solid #D4E1E4;
     border-radius: 16px;
     margin-top: 30px;
     margin-bottom: 10px;
     padding: 10px 20px;
-
+    overflow-x: auto;
 }
 
 .border-div {
@@ -53,5 +50,6 @@ const widgetArr = ref([
     display: flex;
     flex: auto;
     justify-content: space-between;
+    min-height: 120px;
 }
 </style>

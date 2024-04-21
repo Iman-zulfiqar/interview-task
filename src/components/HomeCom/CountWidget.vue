@@ -28,25 +28,27 @@ defineProps({
 
 <style scoped>
 .box {
-    min-height: 122px;
+    /* min-height: 122px; */
     padding: 28px 20px 28px 20px;
     gap: 12px;
     opacity: 0px;
     width: 100%;
+    aspect-ratio: 4/2;
+    overflow: hidden;
+
 }
 
 h2 {
     font-size: 16px;
     font-weight: 400;
-    line-height: 22px;
-    letter-spacing: -0.01em;
+
     text-align: left;
 }
 
 h1 {
     font-size: 2rem;
     font-weight: 600;
-    letter-spacing: -0.02em;
+
     text-align: left;
     display: flex;
     flex-wrap: nowrap;
@@ -56,8 +58,7 @@ h1 {
     font-size: 16px;
     display: flex;
     font-weight: 500;
-    line-height: 22px;
-    letter-spacing: -0.01em;
+
     text-align: left;
     gap: 6px;
 }
@@ -67,8 +68,7 @@ h1 {
     font-size: 16px;
     display: flex;
     font-weight: 500;
-    line-height: 22px;
-    letter-spacing: -0.01em;
+
     text-align: left;
 
 }
