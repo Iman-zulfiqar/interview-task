@@ -1,9 +1,14 @@
 <script setup>
 import AuthLayout from '@/components/AuthComp/AuthLayout.vue';
+import router from '@/router';
+
+function submitHandler() {
+    router.push('/home')
+}
 </script>
 
 <template>
-    <AuthLayout>
+    <AuthLayout :buttonHandler="submitHandler">
         <template #heading>
             Check your email for a code
         </template>

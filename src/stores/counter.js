@@ -9,7 +9,6 @@ export const useCounterStore = defineStore("counter", () => {
     count.value++;
   }
   function setEmail(param) {
-    console.log(">>> i am calling ", param);
     email.value = param;
   }
   return { count, setEmail, email, doubleCount, increment };

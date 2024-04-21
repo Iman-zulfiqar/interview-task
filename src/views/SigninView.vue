@@ -9,7 +9,6 @@ const isEmail = ref(null)
 function validateEmail() {
     const result = regex.test(counter.email)
     result ? isEmail.value = true : isEmail.value = false
-    console.log(isEmail.value, 'email >>????');
 }
 function submitHandler() {
     router.push('/otp-verification')
