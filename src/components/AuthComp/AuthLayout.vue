@@ -1,3 +1,15 @@
+<script setup>
+defineProps({
+    isDisable: {
+        type: Boolean,
+        required: true
+    },
+    buttonHandler: {
+        type: Object,
+        required: true
+    }
+})
+</script>
 <template>
     <div class="container">
         <img id="logo" src="../../assets/images/Logo.png" alt="logo">
@@ -10,9 +22,9 @@
                     <slot name="sub-heading"></slot>
                 </h1>
             </div>
-
             <div class="content-container">
-                <slot name="content"></slot> <button type="submit">Continue</button>
+                <slot name="content"></slot> <button @click="buttonHandler()" :disabled="isDisable"
+                    type="submit">Continue</button>
                 <slot name="post-content"></slot>
             </div>
         </div>
@@ -109,7 +121,9 @@ button:disabled {
 }
 
 @media (max-width: 450px) {
-    .sub-heading,.heading {
+
+    .sub-heading,
+    .heading {
         text-align: left;
     }
 }

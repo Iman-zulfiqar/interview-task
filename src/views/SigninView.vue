@@ -1,9 +1,23 @@
 <script setup>
+import { ref } from 'vue'
 import AuthLayout from '@/components/AuthComp/AuthLayout.vue';
+import { useCounterStore } from '../stores/counter'
+import router from '@/router';
+const counter = useCounterStore();
+let regex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
+const isEmail = ref(null)
+function validateEmail() {
+    const result = regex.test(counter.email)
+    result ? isEmail.value = true : isEmail.value = false
+    console.log(isEmail.value, 'email >>????');
+}
+function submitHandler() {
+    router.push('/otp-verification')
+}
 </script>
 
 <template>
-    <AuthLayout>
+    <AuthLayout :isDisable="isEmail ? false : true" :buttonHandler="submitHandler">
         <template #heading>
             Hi, Welcome Back to Streamed!
         </template>
@@ -22,13 +36,18 @@ import AuthLayout from '@/components/AuthComp/AuthLayout.vue';
 
                 <div class="email-section">
                     <label for="email">Your Email</label>
-                    <input type="email" name="email" placeholder="e.g. john_brown@company.com" id="email">
+                    <input type="email" name="email" @keyup="(e) => {
+                        counter.setEmail(e.target.value)
+                        validateEmail()
+                    }" placeholder="e.g. john_brown@company.com" id="email">
+                    <span v-if="isEmail == false" class="text-[red]">Invalid email</span>
                 </div>
             </div>
         </template>
         <template #post-content>
             <div class="post-content">We'll email you a magic code for a password-free sign-in. Or you can router
-                <RouterLink to="/otp-verification">sign in manually instead</RouterLink>.</div>
+                <RouterLink to="/otp-verification">sign in manually instead</RouterLink>.
+            </div>
         </template>
     </AuthLayout>
 </template>
@@ -40,7 +59,6 @@ import AuthLayout from '@/components/AuthComp/AuthLayout.vue';
     justify-content: center;
     align-items: center;
     gap: 10px;
-
 }
 
 button {

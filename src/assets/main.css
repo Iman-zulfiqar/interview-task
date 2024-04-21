@@ -9,7 +9,7 @@
 a,
 .green {
   text-decoration: none;
-  color: var(--theme-color);
+  color: var(--theme-color) !important;
   transition: 0.4s;
   padding: 3px;
 }

@@ -113,7 +113,6 @@ table,
 th {
     border: 1px solid #D4E1E4;
 }
-
 th,
 td {
     padding: 10px;
